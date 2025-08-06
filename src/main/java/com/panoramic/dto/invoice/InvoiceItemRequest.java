@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 
 @Data
 public class InvoiceItemRequest {
+
     @NotBlank(message = "Description is required")
     private String description;
 
@@ -19,4 +20,8 @@ public class InvoiceItemRequest {
     @NotNull(message = "Rate is required")
     @Positive(message = "Rate must be positive")
     private BigDecimal rate;
+
+    private Long inventoryItemId;
+
+
 }

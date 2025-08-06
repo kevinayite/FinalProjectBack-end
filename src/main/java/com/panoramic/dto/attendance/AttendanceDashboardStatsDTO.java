@@ -10,13 +10,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AttendanceDashboardStatsDTO {
-    // Today's stats
+
     private AttendanceStatsDTO todayStats;
 
-    // Trend data for charts
+
     private List<DailyAttendanceTrendDTO> trendData;
 
-    // Additional dashboard metrics
+
     private Double averageAttendanceRate;
     private Integer totalWorkingDays;
     private String date;
@@ -30,6 +30,7 @@ public class AttendanceDashboardStatsDTO {
         private Long absent;
         private Long late;
         private Long onLeave;
+        private long halfDay;
         private Double attendanceRate;
     }
 }

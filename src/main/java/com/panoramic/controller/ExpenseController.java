@@ -1,5 +1,4 @@
 package com.panoramic.controller;
-
 import com.panoramic.dto.payload.*;
 import com.panoramic.service.ExpenseService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,6 @@ import java.time.LocalDate;
 @RestController
 @RequestMapping("/api/expenses")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 public class ExpenseController {
 
     private final ExpenseService expenseService;

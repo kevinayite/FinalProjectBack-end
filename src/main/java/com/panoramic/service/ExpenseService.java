@@ -223,6 +223,7 @@ public class ExpenseService {
         expense.setExpenseDate(dto.expenseDate());
         expense.setDescription(dto.description());
         expense.setCreatedAt(LocalDateTime.now());
+        expense.setBudget(item.getBudget());
 
         Expense savedExpense = expenseRepository.save(expense);
 

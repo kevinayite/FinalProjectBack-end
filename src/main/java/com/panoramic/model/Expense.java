@@ -79,4 +79,9 @@ public class Expense {
 
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "budget_id", nullable = false)
+    private Budget budget;
+
 }

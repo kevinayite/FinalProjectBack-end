@@ -180,6 +180,8 @@ public class BudgetService {
                 budget.getBudgetName(),
                 budget.getTotalAmount(),
                 budget.getAllocatedAmount(),
+                budget.getDepartment().getName(),
+                budget.getCreatedAt(),
                 budget.getSpentAmount(),
                 budget.getTotalAmount().compareTo(BigDecimal.ZERO) > 0 ?
                         budget.getSpentAmount().divide(budget.getTotalAmount(), 4, BigDecimal.ROUND_HALF_UP)

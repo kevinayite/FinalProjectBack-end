@@ -9,4 +9,5 @@ public class InventoryStatsResponse {
     private double valueInStock;
     private long outOfStockItems;
     private long inStockItems;
+
 }

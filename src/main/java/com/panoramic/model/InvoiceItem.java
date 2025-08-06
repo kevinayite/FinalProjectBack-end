@@ -40,6 +40,7 @@
 package com.panoramic.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -73,4 +74,12 @@ public class InvoiceItem {
 
     @Column(nullable = false)
     private BigDecimal amount;
+
+    // Add reference to inventory item
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "inventory_item_id")
+    @JsonIgnore
+    private InventoryItem inventoryItem;
+
+
 }
